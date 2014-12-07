@@ -1,0 +1,17 @@
+{
+    "name": "zfrapid/zf2rapid-library",
+    "description": "ZF2 module with a library to be used by ZF2rapid Skeleton Application",
+    "type": "library",
+    "require": {
+        "php": ">=5.3.23",
+        "zendframework/zendframework": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZF2rapidLib": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
