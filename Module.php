@@ -6,8 +6,6 @@
  * @link       https://github.com/ZFrapid/zf2rapid-library
  * @copyright  Copyright (c) 2014 Ralf Eggert
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- *
- * @todo       Move module to vendor
  */
 
 /**
