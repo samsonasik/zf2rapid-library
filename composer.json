@@ -6,6 +6,9 @@
         "php": ">=5.3.23",
         "zendframework/zendframework": "2.*"
     },
+    "require-dev": {
+        "bjyoungblood/bjy-profiler" : "dev-master"
+    },
     "autoload": {
         "psr-0": {
             "ZF2rapidLib": "src/"
