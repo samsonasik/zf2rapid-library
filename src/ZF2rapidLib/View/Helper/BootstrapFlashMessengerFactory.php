@@ -17,20 +17,20 @@ use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * FlashMessenger view helper factory
+ * BootstrapFlashMessenger view helper factory
  *
- * Generates the FlashMessenger view helper object
+ * Generates the BootstrapFlashMessenger view helper object
  *
  * @package    ZF2rapidLib
  */
-class FlashMessengerFactory implements FactoryInterface
+class BootstrapFlashMessengerFactory implements FactoryInterface
 {
     /**
      * Create Service Factory
      *
      * @param ServiceLocatorInterface $viewHelperManager
      *
-     * @return mixed|\ZF2rapidLib\View\Helper\FlashMessenger
+     * @return BootstrapFlashMessenger
      */
     public function createService(ServiceLocatorInterface $viewHelperManager)
     {
@@ -41,7 +41,7 @@ class FlashMessengerFactory implements FactoryInterface
 
         $plugin = $controllerPluginManager->get('flashMessenger');
 
-        $helper = new FlashMessenger($plugin);
+        $helper = new BootstrapFlashMessenger($plugin);
 
         return $helper;
     }

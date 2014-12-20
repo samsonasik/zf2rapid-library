@@ -1,0 +1,20 @@
+<?php
+/**
+ * ZF2rapid library
+ *
+ * @package    ZF2rapidLib
+ * @link       https://github.com/ZFrapid/zf2rapid-library
+ * @copyright  Copyright (c) 2014 Ralf Eggert
+ * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
+ */
+
+/**
+ * Bootstrap alert widget view script
+ *
+ * @package    ZF2rapidLib
+ */
+?>
+<div class="alert alert-dismissible <?php echo $this->alertClass; ?>">
+    <button class="close" data-dismiss="alert" type="button">×</button>
+    <h2><?php echo $this->translate($this->alertMessage); ?></h2>
+</div>

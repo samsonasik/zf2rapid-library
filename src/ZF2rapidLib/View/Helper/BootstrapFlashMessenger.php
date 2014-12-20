@@ -6,8 +6,6 @@
  * @link       https://github.com/ZFrapid/zf2rapid-library
  * @copyright  Copyright (c) 2014 Ralf Eggert
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- *
- * @todo       Move string concatenation to a widget view script
  */
 
 /**
@@ -17,15 +15,16 @@ namespace ZF2rapidLib\View\Helper;
 
 use Zend\Mvc\Controller\Plugin\FlashMessenger as ZendFlashMessenger;
 use Zend\View\Helper\AbstractHelper;
+use Zend\View\Model\ViewModel;
 
 /**
- * FlashMessenger view helper
+ * BootstrapFlashMessenger view helper
  *
  * Outputs all messages from FlashMessenger in Bootstrap style
  *
  * @package    ZF2rapidLib
  */
-class FlashMessenger extends AbstractHelper
+class BootstrapFlashMessenger extends AbstractHelper
 {
     /**
      * FlashMessenger plugin
@@ -107,11 +106,14 @@ class FlashMessenger extends AbstractHelper
             foreach ($groupMessages as $message) {
                 $addClass = $groupKey == 'default' ? '' : 'alert-' . $groupKey;
 
-                // create output
-                $output .= '<div class="alert ' . $addClass . '">';
-                $output .= '<button class="close" data-dismiss="alert" type="button">×</button>';
-                $output .= '<h2>' . $message . '</h2>';
-                $output .= '</div>';
+                // setup view model
+                $viewModel = new ViewModel();
+                $viewModel->setVariable('alertClass', $addClass);
+                $viewModel->setVariable('alertMessage', $message);
+                $viewModel->setTemplate('zf2rapid-library/widget/bootstrap-alert');
+
+                // add rendered output
+                $output .= $this->getView()->render($viewModel);
             }
         }
 
