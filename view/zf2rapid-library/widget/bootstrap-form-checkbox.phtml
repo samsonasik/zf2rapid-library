@@ -1,0 +1,26 @@
+<?php
+/**
+ * ZF2rapid library
+ *
+ * @package    ZF2rapidLib
+ * @link       https://github.com/ZFrapid/zf2rapid-library
+ * @copyright  Copyright (c) 2014 Ralf Eggert
+ * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
+ */
+
+/**
+ * Bootstrap form group widget view script
+ *
+ * @package    ZF2rapidLib
+ */
+?>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+            <label>
+                <?php echo $this->formElement($this->element); ?>
+                <?php echo $this->translate($this->element->getOption('label')); ?>
+            </label>
+        </div>
+    </div>
+</div>
