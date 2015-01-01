@@ -32,7 +32,7 @@ class BootstrapMenu extends AbstractHelper
      *
      * @return string
      */
-    public function __invoke($html, $class = 'toplevel')
+    public function __invoke($html, $class = 'toplevel', $toggle = false)
     {
         $domDoc = new \DOMDocument('1.0', 'utf-8');
         $domDoc->loadXML('<?xml version="1.0" encoding="utf-8"?>' . $html);
@@ -57,7 +57,9 @@ class BootstrapMenu extends AbstractHelper
                     $li->setAttribute('class', 'dropdown');
                 }
 
-                $item->setAttribute('data-toggle', 'dropdown');
+                if ($toggle) {
+                    $item->setAttribute('data-toggle', 'dropdown');
+                }
 
                 if (($existingClass = $item->getAttribute('class')) !== '') {
                     $item->setAttribute(
