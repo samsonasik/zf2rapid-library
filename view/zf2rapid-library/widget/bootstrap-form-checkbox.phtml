@@ -14,6 +14,11 @@
  * @package    ZF2rapidLib
  */
 ?>
+<?php if ($this->element->getOption('heading')) : ?>
+    <h4>
+        <?php echo $this->translate($this->element->getOption('heading')) ?>
+    </h4>
+<?php endif; ?>
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">

@@ -80,7 +80,6 @@ class BootstrapForm extends AbstractHelper
             }
         }
 
-
         // setup view model
         $viewModel = new ViewModel();
         $viewModel->setVariable('submitElements', $submitElements);
