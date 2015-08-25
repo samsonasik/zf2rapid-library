@@ -3,8 +3,11 @@
     "description": "ZF2 module with a library to be used by ZF2rapid Skeleton Application",
     "type": "library",
     "require": {
-        "php": ">=5.3.23",
-        "zendframework/zendframework": "2.*"
+        "php": ">=5.5",
+        "zendframework/zend-eventmanager": "~2.5",
+        "zendframework/zend-modulemanager": "~2.5",
+        "zendframework/zend-mvc": "~2.5",
+        "zendframework/zend-view": "~2.5"
     },
     "require-dev": {
         "bjyoungblood/bjy-profiler" : "dev-master"
