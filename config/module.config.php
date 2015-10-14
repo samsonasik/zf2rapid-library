@@ -13,23 +13,23 @@
  *
  * @package    ZF2rapidLib
  */
-return array(
-    'view_helpers' => array(
-        'invokables' => array(
+return [
+    'view_helpers' => [
+        'invokables' => [
             'zf2rapidLibH1'            => 'ZF2rapidLib\View\Helper\H1',
             'zf2rapidLibDate'          => 'ZF2rapidLib\View\Helper\Date',
             'zf2rapidLibBootstrapForm' => 'ZF2rapidLib\View\Helper\BootstrapForm',
             'zf2rapidLibBootstrapMenu' => 'ZF2rapidLib\View\Helper\BootstrapMenu',
-        ),
-        'factories'  => array(
+        ],
+        'factories'  => [
             'zf2rapidLibBootstrapFlashMessenger' => 'ZF2rapidLib\View\Helper\BootstrapFlashMessengerFactory',
-        ),
-    ),
+        ],
+    ],
 
-    'view_manager' => array(
+    'view_manager' => [
         'template_map'        => include __DIR__ . '/../template_map.php',
-        'template_path_stack' => array(
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+];

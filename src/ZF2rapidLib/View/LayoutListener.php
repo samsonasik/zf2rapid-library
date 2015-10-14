@@ -31,12 +31,12 @@ class LayoutListener extends AbstractListenerAggregate
     /**
      * @var array
      */
-    protected $layoutSegments = array();
+    protected $layoutSegments = [];
 
     /**
      * @param array $layoutSegments
      */
-    function __construct(array $layoutSegments = array())
+    function __construct(array $layoutSegments = [])
     {
         $this->layoutSegments = $layoutSegments;
     }
@@ -50,7 +50,7 @@ class LayoutListener extends AbstractListenerAggregate
     {
         $this->listeners[] = $events->attach(
             MvcEvent::EVENT_RENDER,
-            array($this, 'renderLayoutSegments'),
+            [$this, 'renderLayoutSegments'],
             -100
         );
     }

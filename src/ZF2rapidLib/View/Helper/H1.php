@@ -55,7 +55,7 @@ class H1 extends HeadTitle
     {
         $output = parent::toString($indent);
         $output = str_replace(
-            array('<title>', '</title>'), array('<h1>', '</h1>'), $output
+            ['<title>', '</title>'], ['<h1>', '</h1>'], $output
         );
 
         return $output;

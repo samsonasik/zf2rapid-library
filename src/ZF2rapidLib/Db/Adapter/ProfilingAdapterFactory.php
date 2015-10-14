@@ -41,7 +41,7 @@ class ProfilingAdapterFactory implements FactoryInterface
         $adapter = new ProfilingAdapter($config['db']);
         $adapter->setProfiler(new Profiler());
         $adapter->injectProfilingStatementPrototype(
-            array('buffer_results' => true)
+            ['buffer_results' => true]
         );
 
         return $adapter;

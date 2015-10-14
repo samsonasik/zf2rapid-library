@@ -61,7 +61,7 @@ class BootstrapFlashMessenger extends AbstractHelper
     public function render()
     {
         // get messages
-        $allMessages = array(
+        $allMessages = [
             'danger'  => array_unique(
                 array_merge(
                     $this->flashMessenger->getErrorMessages(),
@@ -92,7 +92,7 @@ class BootstrapFlashMessenger extends AbstractHelper
                     $this->flashMessenger->getCurrentMessages()
                 )
             ),
-        );
+        ];
 
         // clear messages
         $this->flashMessenger->clearMessagesFromContainer();

@@ -39,7 +39,7 @@ class BootstrapForm extends AbstractHelper
     public function __invoke(
         FormInterface $form, $class = 'form-horizontal'
     ) {
-        $submitElements = array();
+        $submitElements = [];
 
         $form->setAttribute('class', $class . ' well');
         $form->setAttribute('role', 'form');
@@ -63,9 +63,9 @@ class BootstrapForm extends AbstractHelper
                 // render form element
                 $output .= $this->getView()->render($viewModel);
             } else {
-                $element->setAttributes(array('class' => 'form-control'));
+                $element->setAttributes(['class' => 'form-control']);
                 $element->setLabelAttributes(
-                    array('class' => 'col-sm-2 control-label')
+                    ['class' => 'col-sm-2 control-label']
                 );
 
                 // setup view model
