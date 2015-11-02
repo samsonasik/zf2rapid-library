@@ -15,6 +15,7 @@ namespace ZF2rapidLib\View\Helper;
 
 use Zend\Form\Element\Button;
 use Zend\Form\Element\Checkbox;
+use Zend\Form\Element\Collection;
 use Zend\Form\Element\Csrf;
 use Zend\Form\Element\Hidden;
 use Zend\Form\Element\Submit;
@@ -52,6 +53,8 @@ class BootstrapForm extends AbstractHelper
                 $submitElements[] = $element;
             } elseif ($element instanceof Csrf || $element instanceof Hidden) {
                 $output .= $this->getView()->formElement($element);
+            } elseif ($element instanceof Collection) {
+                $output .= $this->getView()->formCollection($element);
             } elseif ($element instanceof Checkbox) {
                 // setup view model
                 $viewModel = new ViewModel();
